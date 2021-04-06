@@ -1,0 +1,6 @@
+.dockerignore
+.vscode/
+Bloque Fundamentos/.ipynb_checkpoints/
+Bloque Practico/.ipynb_checkpoints/
+Bloque Practico/images/
+Bloque Practico/images.zip
