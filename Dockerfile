@@ -3,12 +3,15 @@ FROM ubuntu:20.04
 RUN apt-get update && apt-get -y update
 RUN apt-get install -y python3-pip python3-dev
 RUN apt install python3.8
+RUN apt-get install -y git 
+RUN apt-get install -y libgl1-mesa-dev
 RUN pip3 -q install pip --upgrade
 
 RUN mkdir src
 WORKDIR src/
 COPY . .
 
+RUN pip3 install opencv-python
 RUN pip3 install -r requirements.txt
 RUN pip3 install jupyter notebook
 
