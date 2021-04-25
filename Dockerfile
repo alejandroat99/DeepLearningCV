@@ -41,11 +41,10 @@ ENV FVCORE_CACHE="/tmp"
 RUN pip install jupyterlab
 RUN pip install jupyter notebook
 RUN pip install tensorflow==2.4.1 pandas
->>>>>>> a5748175a960c9cf58778c11c72ee51a1155e648
 
 WORKDIR src/
 COPY . .
 
 RUN sudo chown -R appuser .
 CMD ["jupyter", "notebook",  "--port=8888", "--ip=0.0.0.0", "--allow-root", "--no-browser"]
->>>>>>> a5748175a960c9cf58778c11c72ee51a1155e648
+
