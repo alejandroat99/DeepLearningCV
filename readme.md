@@ -30,7 +30,14 @@ centrándose en el encadenamiento de técnicas para resolver los problemas plant
 - Docker
 
 ## Ejecución
+Los siguientes pasos a siguientes pasos son para la primera ejecución del contenedor docker
+
 1. Descargar el contenido del repositorio
-2. Construir la imagen docker: `docker build -t <image-name> .`.
-3. Ejecutar la imagen docker: `docker run -p <port>:8888 <image-name>`.
-4. Acceder a la dirección: `127.0.0.1:<port>`.
+2. Construir la imagen docker desde la carpeta del repositorio: `docker build -t <image-name> .`.
+3. Ejecutar la imagen docker: `docker run -d -v <path-absoluto-repositorio>:/home/appuser/src -p <port>:8888 <image-name>`.
+4. Acceder a la dirección: `127.0.0.1:<port>` y consultar en la consola de docker el token de acceso.
+5. Ejecutar `docker ps` para ver el nombre del contenedor que se está ejecutanto
+
+Para ejecuciones posteriores tan solo debemos volver a ejecutar el contendor docker que se creo con los pasos anteriores.
+Esto se puede hacer desde la aplicación _Docker Desktop_ o desde la consola del equipo con el comando
+`docker start <container-name>`.

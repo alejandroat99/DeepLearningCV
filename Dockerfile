@@ -43,7 +43,6 @@ RUN pip install jupyter notebook
 RUN pip install tensorflow==2.4.1 pandas
 
 WORKDIR src/
-COPY . .
 
 RUN sudo chown -R appuser .
 CMD ["jupyter", "notebook",  "--port=8888", "--ip=0.0.0.0", "--allow-root", "--no-browser"]
