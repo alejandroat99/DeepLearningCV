@@ -36,12 +36,12 @@ RUN pip install --user -e detectron2_repo
 
 # Set a fixed model cache directory.
 ENV FVCORE_CACHE="/tmp"
-# WORKDIR /home/appuser/detectron2_repo
 
 RUN pip install jupyterlab
 RUN pip install jupyter notebook
 RUN pip install tensorflow==2.4.1 pandas
 RUN pip install pytesseract
+RUN pip install scipy
 
 WORKDIR src/
 
