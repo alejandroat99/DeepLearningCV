@@ -32,7 +32,7 @@ centrándose en el encadenamiento de técnicas para resolver los problemas plant
 ## Ejecución
 Los siguientes pasos a siguientes pasos son para la primera ejecución del contenedor docker
 
-1. Descargar el contenido del repositorio
+1. Descargar el contenido del repositorio y los archivos pesados de la dirección https://drive.google.com/drive/folders/1801wUy-lAj4IQyiXTKyh-83xcNCvq9Qq?usp=sharing
 2. Construir la imagen docker desde la carpeta del repositorio: `docker build -t <image-name> .`.
 3. Ejecutar la imagen docker: `docker run -d -v <path-absoluto-repositorio>:/home/appuser/src -p <port>:8888 <image-name>`.
 4. Acceder a la dirección: `127.0.0.1:<port>` y consultar en la consola de docker el token de acceso.
